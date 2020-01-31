@@ -3,6 +3,9 @@
   before granting access to the next middleware/route handler
 */
 
+const jwt = require("jsonwebtoken")
+const { jwtSecret } = require("../database/config/secrets")
+
 module.exports = {
   authenticate,
   validateRequest
